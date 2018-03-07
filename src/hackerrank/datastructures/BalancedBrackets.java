@@ -10,7 +10,7 @@ import java.util.*;
  */
 public class BalancedBrackets {
     
-    private static final String  YES = "YES";
+    private static final String YES = "YES";
     private static final String NO = "NO";
 
     private static final String OPENING = "{[(";

@@ -58,9 +58,9 @@ public class RotationWithSubstring {
 		char[] cOriginal = original.trim().toLowerCase().toCharArray();
 		char[] cPossibleRotation = possibleRotation.trim().toLowerCase().toCharArray();
 		
-		//Sorry, it was not me who figured out the answer.
-		//I didn't really had time to think about it when I overhead the solution °~°'
-		//So that is why the substring was for? 
+		//Sorry, it was not me who figured the answer out.
+		//I didn't really had time to think about it when I overhead the solution: 
+		//So that is why the substring was for? °~°'
 		return isSubstring(duplicate(cOriginal), cPossibleRotation);
 	}
 	

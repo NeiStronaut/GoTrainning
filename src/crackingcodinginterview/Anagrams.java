@@ -36,7 +36,8 @@ public class Anagrams {
 		//prepare
 		char[] sortedOriginal = original.trim().toLowerCase().toCharArray();
 		char[] sortedPossibleAnagram = possibleAnagram.trim().toLowerCase().toCharArray();
-		//TODO Review complexity of sorting Arrays
+		
+		//Complexity of sorting Arrays O(n log2 n)
 		Arrays.sort(sortedOriginal);
 		Arrays.sort(sortedPossibleAnagram);
 		

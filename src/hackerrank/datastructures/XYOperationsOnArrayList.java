@@ -16,6 +16,7 @@ public class XYOperationsOnArrayList {
         
         int numberOfLines = scanner.nextInt();
         List<List<Integer>> lists = new ArrayList<>();
+        //O(nxm)
         for(int i = 0; i < numberOfLines; i++) {
             int numberOfElements = scanner.nextInt();
             List<Integer> list = new ArrayList<>();
@@ -26,6 +27,7 @@ public class XYOperationsOnArrayList {
         }
         
         int numberOfQueries = scanner.nextInt();
+        //O(q)
         for(int i = 0; i < numberOfQueries; i++) {
             int xLine = scanner.nextInt();
             int yElement = scanner.nextInt();

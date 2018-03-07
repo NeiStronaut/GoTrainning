@@ -15,11 +15,13 @@ public class NamesOnHashset {
 		String [] pair_left = new String[t];
 		String [] pair_right = new String[t];
 
+		// Complexity O(n)
 		for (int i = 0; i < t; i++) {
 			pair_left[i] = s.next();
 			pair_right[i] = s.next();
 		}
 		//Write your code here
+		// Complexity O(n)
 		HashSet<String> personSet = new HashSet<String>();
 		for (int i = 0; i < t; i++) {
 			String person = pair_left[i] + " " + pair_right[i];

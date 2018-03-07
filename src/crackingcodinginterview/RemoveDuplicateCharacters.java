@@ -23,7 +23,7 @@ public class RemoveDuplicateCharacters {
 		char[] characters = input.toCharArray();
 		int maxLength = characters.length;
 		
-		//Complexity O(n * m!) T_T
+		//Complexity O(n * m^2) T_T
 		for(int i = 0; i < maxLength; i++) {			
 			for(int j = i+1; j < maxLength; j++)  {
 				

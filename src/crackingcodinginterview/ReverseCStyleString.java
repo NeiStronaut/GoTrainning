@@ -22,6 +22,7 @@ public class ReverseCStyleString {
 		for(int i = characters.length-2; i >= 0; i--) {			
 			System.out.print(characters[i]);
 		}
+		//Assuming last char will always be '\0'
 		System.out.print(characters[characters.length-1]);
 		System.out.println();
 	}
