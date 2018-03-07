@@ -25,8 +25,8 @@ Here we go, trying to get the time complexities from our solutions...
    3. RemoveDuplicateCharacters.java - Complexity `O(n * m^2)`
    4. Anagrams.java - Complexity `O(n) + O(2(n * log2(n))) = O(n * log2(n))`
    5. ReplaceSpaces.java - Complexity `O(n)`
-   6. RotateMatrix.java - Complexity `O(n)` - [ ] TODO
    8. RotationWithSubstring.java - Complexity `O(n)`
+   6. RotateMatrix.java - Complexity `O((n/2)!)` 
   
 #### Chapter 2 - Linked Lists
 
