@@ -41,9 +41,11 @@ Here we go, trying to get the time complexities from our solutions...
   3. PhoneBookOnMap.java - https://www.hackerrank.com/challenges/phone-book - Complexity `O(n)`
   4. NamesOnHashset.java - https://www.hackerrank.com/challenges/java-hashset - Complexity `O(n)`
   5. NeighboursNumbersOnDeque.java - https://www.hackerrank.com/challenges/java-dequeue - Complexity `O(n)`
+  6. PlayerComparator.java - https://www.hackerrank.com/challenges/java-comparator - Complexity `O(n?)` - [ ] TODO
+  7. StudentSort.java - https://www.hackerrank.com/challenges/java-sort - Complexity `O(n?)` - [ ] TODO
   
 #### More
-  1. BalancedBrackets.java / https://www.hackerrank.com/challenges/balanced-brackets/problem - Complexity `O(n)`
+  1. BalancedBrackets.java / https://www.hackerrank.com/challenges/balanced-brackets - Complexity `O(n)`
 
 ### On the go 
 * PrimarySchoolStudents - Complexity `O(n)`
