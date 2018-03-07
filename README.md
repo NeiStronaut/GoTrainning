@@ -22,7 +22,7 @@ Here we go, trying to get the time complexities from our solutions...
 #### Chapter 1 - Arrays and Strings
    1. UniqueCharacters.java - Sol 1: Complexity `O(n)` Sol 2: Complexity `O(n)` Sol 3: Complexity `O(n!)`
    2. ReverseCStyleString.java - Complexity `O(n)`
-   3. RemoveDuplicateCharacters.java - Complexity `O(n * m!)`
+   3. RemoveDuplicateCharacters.java - Complexity `O(n * m^2)`
    4. Anagrams.java - Complexity `O(n) + O(2n * log2(n)) = O(n)`
    5. ReplaceSpaces.java - Complexity `O(n)`
    6. RotateMatrix.java - Complexity `O(n)` - [ ] TODO
