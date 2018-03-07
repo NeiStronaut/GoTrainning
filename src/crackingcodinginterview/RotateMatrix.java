@@ -78,20 +78,22 @@ public class RotateMatrix {
 		informalTestCases.add(test4);
 
 		//Rotating four times: 90*4 = 360°
-		int rotations = 1; //4
+		int rotations = 4;
 		
 		for(int[][] test : informalTestCases) {
-			System.out.println("--------------------");
-			System.out.println("Initial TestMatrix: ");
+			System.out.println("-------------------------");
+			System.out.println("Initial TestMatrix ");
+			System.out.println("-------------------------");
 			printMatrix(test);
 			
 			//Rotating four times: 90*4 = 360°
-			for(int i = 0; i < rotations; i++) {
+			for(int i = 1; i <= rotations; i++) {
 				rotate90Right(test);
-				System.out.println((90*i) + "° ");
-				System.out.println("TestMatrix: ");
+				System.out.println();
+				System.out.println((90*i) + "° TestMatrix: ");
 				printMatrix(test);
 			}
+			System.out.println();
 		}
 	}
 
