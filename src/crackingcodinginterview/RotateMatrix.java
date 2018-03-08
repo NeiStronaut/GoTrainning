@@ -28,7 +28,7 @@ public class RotateMatrix {
 	{
 		int dim = matrix.length;
 		int mid = matrix.length / 2;
-		int odd = 0;
+		int odd = 0; //tricky bastard
 		if( matrix.length % 2 > 0 ) {
 			mid += 1;
 			odd = 1;
