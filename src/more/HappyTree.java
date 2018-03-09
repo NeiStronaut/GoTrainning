@@ -1,4 +1,4 @@
-package onthego;
+package more;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -106,6 +106,7 @@ public class HappyTree {
 		public Queue<Node<T>> findPathTo(T value) {
 			Queue<Node<T>> queue = new LinkedList<>();
 			Node<T> current = head; 
+			//O(log2(n))
 			while(current != null) {
 				queue.add(current);
 				int comparison = value.compareTo(current.getElement());
@@ -122,10 +123,20 @@ public class HappyTree {
 			return null;
 		}
 		
+		/**
+		 * Assuming it is a BST
+		 * @param n1
+		 * @param n2
+		 * @return
+		 */
 		public T findLeastCommonAncestor(T n1, T n2) {
+			//O(log2(n))
 			Queue<Node<T>> q1 = findPathTo(n1);
+			//O(log2(n))
 			Queue<Node<T>> q2 = findPathTo(n2);
 			T ancestor = null;
+
+			//O(log2(n))
 			while(q1.size() > 0 && q2.size() > 0) {
 				Node<T> node1 = q1.poll();
 				Node<T> node2 = q2.poll();
@@ -138,6 +149,7 @@ public class HappyTree {
 		
 		
 		public void traverseDepthPreOrder() {
+			//O(n)
 			traverseDepthPreOrder(head);
 		}
 		
@@ -152,6 +164,7 @@ public class HappyTree {
 		
 
 		public void traverseDepthInOrder() {
+			//O(n)
 			traverseDepthInOrder(head);
 		}
 		
@@ -166,6 +179,7 @@ public class HappyTree {
 		
 
 		public void traverseDepthPostOrder() {
+			//O(n)
 			traverseDepthPostOrder(head);
 		}
 		
@@ -188,6 +202,7 @@ public class HappyTree {
 		public void traverseBreadth(List<Node<T>> floor) {
 
 			List<Node<T>> nextFloor = new ArrayList<>();
+			//O(n)
 			for(Node<T> node : floor) {
 				if(node != null) {
 					System.out.print(node.getElement().toString() + " ");

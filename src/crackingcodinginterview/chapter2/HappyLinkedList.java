@@ -132,14 +132,18 @@ public class HappyLinkedList {
 			}
 
 			Node<T> position = head;
+			//O(n)
 			for(int i = 0; i < lenght; i++) {
-				T currentContent = position.getElement();				
-				int ion = indexOfNext(i+1, currentContent);
-				while (ion > 0) {
-					remove(ion);
+				T currentContent = position.getElement();
+
+				//O(n)
+				int ion = 0;
+				do {
 					ion = indexOfNext(i+1, currentContent);
+					remove(ion);
 					removedCounter ++;
-				}
+				} 
+				while (ion > 0);
 				position = position.getNextNode();
 			}
 			return removedCounter;
@@ -151,12 +155,13 @@ public class HappyLinkedList {
 		 * @param index
 		 * @return
 		 */
-		public SimpleLinkedList<T> subList(int index) {
+		public SimpleLinkedList<T> getSublist(int index) {
 			if(index >= lenght || index < 0) {
 				return null;
 			}
 			SimpleLinkedList<T> nova = new SimpleLinkedList<>();
 			Node<T> position = getNode(index);
+			//O(n)
 			for(int i = 0; index + i < lenght; i++) {
 				nova.add(position.getElement());
 				position = position.getNextNode();
@@ -181,7 +186,8 @@ public class HappyLinkedList {
 				lenght --;
 				return true;
 			}
-			
+
+			//O(n)
 			Node<T> prevPosition = head;
 			Node<T> position = head.getNextNode();;
 			do {
@@ -211,7 +217,7 @@ public class HappyLinkedList {
 		}
 		System.out.println("Start: ");
 		System.out.println(llist.toString());
-		
+
 		System.out.println("Add T: ");
 		llist.add("T");
 		System.out.println(llist.toString());
@@ -232,7 +238,7 @@ public class HappyLinkedList {
 
 		//Solution for 2.2
 		System.out.println("Sublist 2: ");
-		SimpleLinkedList<String> llist2 = llist.subList(2);
+		SimpleLinkedList<String> llist2 = llist.getSublist(2);
 		System.out.println(llist2.toString());
 
 		//Solution for 2.3
