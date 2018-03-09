@@ -9,68 +9,36 @@ import java.util.*;
  */
 public class NeighboursNumbersOnDeque {
 
-	//94531
 	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
 		Deque<Integer> deque = new ArrayDeque<>();
-		SortedSet<Integer> uniques = new TreeSet<>();
+		Map<Integer, Integer> uniques = new HashMap<>();
+		int max = 0;
 
-		int n = 100000;
-		int m = 99277;
-		int[] xxx = {5, 3, 5, 2, 3, 2};
+		int n = in.nextInt();
+		int m = in.nextInt();
 
-		Map<Integer, Integer> uniqueNumbers = new HashMap<>();
-		if(n < m) {
-			for (int i = 0; i < m; i++) {
-				int num = xxx[i];
-				if(deque.size() < m) {
-					deque.push(num);
-					Integer count = uniqueNumbers.getOrDefault(num, 0);
-					uniqueNumbers.put(num, count+1);
-					continue;
+		for (int i = 0; i < n; i++) {
+			Integer num = in.nextInt();
+			if(deque.size() <= m) {
+				deque.add(num);
+				uniques.put(num, uniques.getOrDefault(num, 0)+1);
+			}
+			if(deque.size() == m) {
+				if(uniques.size() > max) {
+					max = uniques.size();
+				}
+				Integer remove = deque.remove();
+				Integer value = uniques.get(remove);
+				if(value > 1) {
+					uniques.put(remove, value-1);
+				}
+				else {
+					uniques.remove(remove);
 				}
 			}
-			System.out.println(uniqueNumbers.size());
 		}
-		else {
-			for (int i = 0; i < n; i++) {
-				int num = xxx[i];
-				if(deque.size() < m) {
-					deque.push(num);
-					Integer count = uniqueNumbers.getOrDefault(num, 0);
-					uniqueNumbers.put(num, count+1);
-					continue;
-				}
-
-				//Set<Integer> uniqueNumbers = new HashSet();
-				//Iterator it = deque.iterator();
-				//while(it.hasNext()) {
-				//    uniqueNumbers.add((Integer)it.next());
-				//}
-				uniques.add(uniqueNumbers.size());
-
-				Integer removed = deque.pollFirst();
-				deque.push(num);
-
-				if(!removed.equals(num)) {                        
-					Integer count = uniqueNumbers.getOrDefault(num, 0);
-					uniqueNumbers.put(num, count+1);
-					Integer removedCount = uniqueNumbers.get(removed);
-					if(removedCount == 1) {
-						uniqueNumbers.remove(removed);
-					}
-					else {
-						uniqueNumbers.put(removed, removedCount-1);
-					}
-				}
-			}
-
-			//Set<Integer> uniqueNumbers = new HashSet();
-			//Iterator it = deque.iterator();
-			//while(it.hasNext()) {
-			//    uniqueNumbers.add((Integer)it.next());
-			//}
-			uniques.add(uniqueNumbers.size());                
-			System.out.println(uniques.last());
-		}
+		System.out.println(max);
+		in.close();
 	}
 }
