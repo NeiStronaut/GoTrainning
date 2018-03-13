@@ -9,7 +9,8 @@ There are three folders according to the following:
 src
  |-- crackingcodinginterview
  |-- hackerrank
- +-- more
+ |-- more
+ +-- multithreading
 ```
 All of them contains exercises requested from the book Cracking the Coding Interview, exercises requested from HackerRank (on the presentation) and additional exercises requested during the training.
 
@@ -58,5 +59,12 @@ Here we go, trying to get the time complexities from our solutions...
 * HappyTree.java - Traverse Depth First - Post Order - Complexity `O(n)`
 * HappyTree.java - Traverse Breadth First - Complexity `O(n)`
 * HappyTree.java - Is BST - Complexity `O(n)`
+* BucketTestingHashMap.java
+
+### Multithreading
+* CountingThreads.java
+* PingPong.java
+* ThreadSafeSingletonObject.java
+* ThreadSafeSingletonObjectEnum.java
 
 
