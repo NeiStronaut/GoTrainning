@@ -10,7 +10,8 @@ src
  |-- crackingcodinginterview
  |-- hackerrank
  |-- more
- +-- multithreading
+ |-- multithreading
+ +-- functionalprogramming
 ```
 All of them contains exercises requested from the book Cracking the Coding Interview, exercises requested from HackerRank (on the presentation) and additional exercises requested during the training.
 
@@ -21,13 +22,13 @@ Here we go, trying to get the time complexities from our solutions...
 ### Cracking the Coding Interview
 
 #### Chapter 1 - Arrays and Strings
-   1. UniqueCharacters.java - Sol 1: Complexity `O(n)` Sol 2: Complexity `O(n)` Sol 3: Complexity `O(n+(n-1)+(n-2)...) = O(n)`
+   1. UniqueCharacters.java - Sol 1: Complexity `O(n)` Sol 2: Complexity `O(n)` Sol 3: Complexity `O(n+(n-1)+(n-2)...) = O(n^2)`
    2. ReverseCStyleString.java - Complexity `O(n)`
    3. RemoveDuplicateCharacters.java - Complexity `O(n * m^2)`
    4. Anagrams.java - Complexity `O(n) + O(2(n * log2(n))) = O(n * log2(n))`
    5. ReplaceSpaces.java - Complexity `O(n)`
    8. RotationWithSubstring.java - Complexity `O(n)`
-   6. RotateMatrix.java - Complexity `O((n-1)+(n-2)...) = O(n)` 
+   6. RotateMatrix.java - Complexity `O((n-1)+(n-2)...) = O(n/2)` 
   
 #### Chapter 2 - Linked Lists
    1. HappyLinkedList.java - Remove duplicates - Complexity `O(n^2)`
@@ -66,5 +67,10 @@ Here we go, trying to get the time complexities from our solutions...
 * PingPong.java
 * ThreadSafeSingletonObject.java
 * ThreadSafeSingletonObjectEnum.java
+
+
+### Functional programming
+* FunctionalProgramming.java - Day 7 exercises
+* LambdasHackerRank.java - Day 7 exercises
 
 
