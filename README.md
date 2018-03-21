@@ -22,7 +22,7 @@ Here we go, trying to get the time complexities from our solutions...
 ### Cracking the Coding Interview
 
 #### Chapter 1 - Arrays and Strings
-   1. UniqueCharacters.java - Sol 1: Complexity `O(n)` Sol 2: Complexity `O(n)` Sol 3: Complexity `O(n+(n-1)+(n-2)...) = O(n^2)`
+   1. UniqueCharacters.java - Sol 1: Complexity `O(n)` Sol 2: Complexity `O(n)` Sol 3: Complexity `O(n+(n-1)+(n-2)...) = O(n/2)`
    2. ReverseCStyleString.java - Complexity `O(n)`
    3. RemoveDuplicateCharacters.java - Complexity `O(n * m^2)`
    4. Anagrams.java - Complexity `O(n) + O(2(n * log2(n))) = O(n * log2(n))`

@@ -33,6 +33,7 @@ public class LambdasHackerRank {
 			};
 		}
 
+		
 		public PerformOperation isPalindrome() {
 			return (int num) -> {
 				StringBuilder sb = new StringBuilder(Integer.toString(num));
@@ -42,7 +43,8 @@ public class LambdasHackerRank {
 	}
 
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws IOException 
+	{
 		MyMath ob = new MyMath();
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int T = Integer.parseInt(br.readLine());
@@ -66,7 +68,6 @@ public class LambdasHackerRank {
 				op = ob.isPalindrome();
 				ret = MyMath.checker(op, num);
 				ans = (ret) ? "PALINDROME" : "NOT PALINDROME";
-
 			}
 			System.out.println(ans);
 		}
